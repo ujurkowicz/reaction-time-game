@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reaction time game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="dropdownBackground">
+        <span class="arrow"></span>
+    </div>
+    <div id="container">
+        <div class="aside">
+            <div class="timer"></div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h1>Reaction time game</h1>
+                <h3>Measure your reflex!</h3>
+            </div>
+            <div id="game-board">
+                <div id="game-options">
+                    <div id="level-options">
+                        <div class="first-child">Level</div>
+                        <button class="child l1">Easy</button>
+                        <button class="child l2">Medium</button>
+                        <button class="child l3">Hard</button>
+                    </div>
+                    <div id="mode-options">
+                        <div class="first-child">Mode</div>
+                        <div class="trigger m1">
+                            <p class="txt-mode">Time</p>
+                            <div class="dropdown dropdown1">
+                                <i class="far fa-clock"></i>
+                                <p>You have 30 seconds to click at pink balloon as many times as you can. </p>
+                            </div>
+                        </div>
+                        <div class="trigger m2">
+                            <p class="txt-mode">Click</p>
+                            <div class="dropdown dropdown2">
+                                <i class="fas fa-hand-pointer"></i>
+                                <p>Click at the pink balloon as fast as you can! You have 10 clicks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="start" value="start">Start</button>
+                <div class="form-bg">
+                    <form id="form"class="form-container">
+                        <input type="text" pattern="[a-zA-Z]{3,10}" placeholder="Enter your name" title="Od 3 do 10 liter" required />
+                        <button type="submit" value="OK">OK</button>
+                        <span class="form-close">X</span>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="game-over-bg" class="form-bg">
+                <div class="game-over-form-container form-container">
+                    <form id="game-over-form" class="hidden">
+                        <h2>Game Over</h2>
+                        <div>
+                            <p id="mean-reaction-time"></p>
+                            <p id="result"></p>
+                        </div>
+                        <div id="game-over-buttons">
+                            <button id="play-again">Play again</button>
+                            <button id="results-btn">Results</button>
+                        </div>
+                    </form>
+                </div>
+                <table id="results-table" class="hidden">
+                    <tr>
+                        <th></th>
+                        <th>Username</th>
+                        <th>Mean reaction time</th>
+                        <th>Level</th>
+                        <th>Mode</th>
+                        <th>Score/Time</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="aside">
+            <div class="instruction trigger">
+                <p>How to play?</p>
+                <div class="dropdown dropdown3">
+                    <i class="fas fa-question"></i>
+                    <p>During the game you're gonna see balloons in different colors. Click at the pink one as fast as you can. </p>
+                </div>
+            </div>
+            <div class="counter"><p></p></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="initialSettings.js"></script>
+</body>
+</html>
