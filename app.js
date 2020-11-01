@@ -155,7 +155,7 @@ function checkForClick(e) {
         if (e.target && e.target.matches('.box')) {
             let balloonTop = e.target.children[0].getBoundingClientRect().top;
             let boxTop = e.target.getBoundingClientRect().top;
-            if (balloonTop - boxTop < e.target.children[0].offsetTop) {
+            if (Math.round(balloonTop - boxTop) < e.target.children[0].offsetTop) {
                 checkColorOfClickedBalloon(e);
             }
         }
