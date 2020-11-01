@@ -119,7 +119,6 @@ h1 {
     border:none;
     height:100%;
 }
-
 .m1, .m2 {
     background: #ffffcc;
     height:100%;
@@ -138,10 +137,9 @@ h1 {
     background: none;
     color: #fff;
 }
-
 #start {
     display: block;
-    margin: 180px auto 50px auto;
+    margin:10% auto;
     font-family: 'Play', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -228,9 +226,9 @@ button[type="submit"] {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
- button[type="submit"]:hover, input[type="submit"]:active, .form-close:hover {
-        transform: scale(0.95);
-    }
+button[type="submit"]:hover, input[type="submit"]:active, .form-close:hover {
+    transform: scale(0.95);
+}
 .dropdown {
     display: none;
     color:#000;
@@ -364,7 +362,7 @@ i {
     }
     to {
         opacity:0;
-        transform:translateX(50%) scale(180%);  
+        transform:translateX(50%) scale(1.8);  
     } 
 }
 /*game over*/
@@ -501,15 +499,13 @@ tr:hover {
         font-size:20px;
     }
 }
-@media(min-width:411px) and (max-width:720px){
+@media(min-width:411px) and (max-width:720px) and (orientation: portrait){
     .instruction {
         display: none;
     }
-
     #mode-options, #level-options {
         width: 80%;
     }
-
     .enter-active .dropdown {
         display: none;
     }
@@ -547,5 +543,39 @@ tr:hover {
     }
     .timer, .counter{
         bottom:40px;
+    }
+}
+@media (max-width:900px) and (orientation:landscape){
+    body {
+        height:110vh;
+    }
+    .enter-active .dropdown {
+        display: none;
+    }
+    .dropdownBackground {
+        display: none;
+    }
+    .instruction {
+        display: none;
+    }
+    #mode-options, #level-options {
+        width: 80%;
+    }
+    #form {
+        width:70%;
+        height:50%;
+    }
+    .box{
+        height:70px;
+        width:50px;
+    }
+    th, td {
+        padding:5px;
+    }
+    #results-table {
+        font-size: 10px;
+    }
+    .reaction-time {
+        font-size: 16px;
     }
 }
