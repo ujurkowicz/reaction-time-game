@@ -226,7 +226,7 @@ function displayEndOfGame() {
     const gameOverFormBg = document.querySelector('#game-over-bg');
     const gameOverForm = document.querySelector('#game-over-form');
     const meanReactionTime = document.querySelector('#mean-reaction-time');
-    const result = document.querySelector('#result')
+    const result = document.querySelector('#result');
     gameOverFormBg.classList.add('form-bg-active');
     gameOverForm.classList.remove('hidden');
     //checking if user score although 1 point
@@ -251,9 +251,11 @@ function displayResults(e) {
     const table = document.querySelector('#results-table');
     const gameOverForm = document.querySelector('#game-over-form');
     const gameOverBg = document.querySelector('.game-over-form-container');
+    const replayBtn = document.querySelector('#replay');
     gameOverBg.classList.add('hidden');
     gameOverForm.textContent = '';
     table.classList.remove('hidden');
+    replayBtn.classList.add('fas', 'fa-redo-alt');
     sortUsers();
     //while is less than top users add rows to table
     for (let i = 0;  i<users.length && i<TOP; i++) {
@@ -285,6 +287,7 @@ function displayResults(e) {
             row.appendChild(col);
         }
     }
+    replayBtn.addEventListener('click', () => window.location.reload());
 }
 //sort user table
 function sortUsers() {

@@ -444,6 +444,20 @@ th, td {
 tr:hover {
     background-color: rgba(188, 203, 197, 0.3);
 }
+#replay {
+    cursor: pointer;
+    position: absolute;
+    font-size: 3em;
+    color: white;
+    opacity:0.5;
+}
+#replay:hover {
+    background: rgba(193, 200, 196,0.2);
+    border-radius: 50px;
+    padding: 5px;
+    opacity:1;
+}
+    
 /*rwd*/
 @media(max-width:410px) {
     .header{
