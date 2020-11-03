@@ -12,9 +12,10 @@ body {
     background: linear-gradient(rgba(51, 102, 153,0.5),rgba(51, 102, 153,0.5)), url('img/sky5.jpg');
     background-position: 50% 50%;
     height: 100vh;
-    width:100%;
+    width: 100%;
     color: #fff;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 h1 {
     font-size: 40px;
@@ -371,8 +372,9 @@ i {
     height: 70%;
     width: 50%;
     background-color: #19334d;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 #game-over-form {
     height:90%;
@@ -535,6 +537,7 @@ tr:hover {
 @media(min-width:721px) and (max-width:1080px){
     #mode-options, #level-options {
         width: 80%;
+        height: 10vh;
     }
     .instruction{
         display:none;
@@ -546,10 +549,7 @@ tr:hover {
         bottom:40px;
     }
 }
-@media (max-width:900px) and (orientation:landscape){
-    body {
-        height:110vh;
-    }
+@media (max-width:600px) and (orientation:landscape){
     .enter-active .dropdown {
         display: none;
     }
@@ -578,5 +578,62 @@ tr:hover {
     }
     .reaction-time {
         font-size: 16px;
+    }
+    .timer, .counter {
+        font-size: 20px;
+        bottom: 10px;
+    }
+    .counter {
+        right: 10px;
+    }
+    .timer {
+        left: 10px;
+    }
+    #game-over-form p{
+        font-size:16px;
+    }
+}
+@media (min-width:601px) and (max-width:900px) and (orientation:landscape) {
+    .enter-active .dropdown {
+        display: none;
+    }
+    .dropdownBackground {
+        display: none;
+    }
+    .instruction {
+        display: none;
+    }
+    #mode-options, #level-options {
+        width: 80%;
+    }
+    #form {
+        width: 70%;
+        height: 50%;
+    }
+    th, td {
+        padding: 5px;
+    }
+    #results-table {
+        font-size: 10px;
+    }
+    .box {
+        width:60px;
+        height:80px;
+    }
+    .timer, .counter{
+        font-size:20px;
+        bottom:10px;
+    }
+    .counter{
+        right:10px;
+    }
+    .timer{
+        left:10px;
+    }
+    .reaction-time {
+        font-size: 20px;
+    }
+    #game-over-form p {
+        font-size: 20px;
     }
 }

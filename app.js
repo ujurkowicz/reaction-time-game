@@ -233,7 +233,7 @@ function displayEndOfGame() {
     let meanTime = Math.round((reactionTimes.reduce((a, b) => a + b, 0)) / reactionTimes.length);
     if (isNaN(meanTime)) meanTime = '-';
     meanReactionTime.textContent = `Your mean reaction time is  ${meanTime} ms.`;
-    (mode == 'Time') ? result.textContent = `Your score is ${score} clicks in 30s.`
+    (mode == 'Time') ? result.textContent = `Your score is ${score} click(s) in 30s.`
         : result.textContent = `You got 10 clicks in ${time.min}:${time.sec}.`;
     updateLocalStorage(meanTime);
 
