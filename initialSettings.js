@@ -56,6 +56,7 @@ function enterName() {
 }
 function closeForm() {
     formBg.classList.remove('form-bg-active');
+    startBtn.classList.remove('clicked');
 }
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));

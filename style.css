@@ -70,6 +70,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     margin-top:50px;
+    flex-grow:0.5;
 }
 #level-options, #mode-options {
     display:flex;
@@ -139,7 +140,7 @@ h1 {
 }
 #start {
     display: block;
-    margin:10% auto;
+    margin:0 auto;
     font-family: 'Play', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -306,7 +307,7 @@ i {
     display: flex;
     flex-direction: column;
     height: 70vh;
-    justify-content: center;
+    justify-content: space-around;
 }
 .box {
     display: block;
